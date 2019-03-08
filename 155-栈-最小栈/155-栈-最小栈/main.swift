@@ -84,3 +84,51 @@ print(stack.getMin())
 stack.pop()
 print(stack.top())
 print(stack.getMin())
+
+
+//方法二: 思路清奇
+//class MinStack {
+//
+//    var minValue = 0
+//    var stack = [Int]()
+//
+//    func push(_ x: Int) {
+//        if stack.isEmpty {
+//            stack.append(0)
+//            minValue = x
+//        } else {
+//            stack.append(x - minValue)
+//            if x < minValue {
+//                minValue = x
+//            }
+//        }
+//    }
+//
+//    func pop() {
+//        if stack.isEmpty {
+//            return
+//        }
+//
+//        let pop = stack.removeLast()
+//
+//        if pop < 0 {
+//            minValue -= pop
+//        }
+//    }
+//
+//    func top() -> Int {
+//        guard let top = stack.last else {
+//            return 0
+//        }
+//
+//        if top > 0 {
+//            return top + minValue
+//        } else {
+//            return minValue
+//        }
+//    }
+//
+//    func getMin() -> Int {
+//        return minValue
+//    }
+//}
