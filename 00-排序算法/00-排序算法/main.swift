@@ -96,14 +96,25 @@ print("选择排序结果 -- " + (Solution.selectionSort(&nums)).description)
  * 将新元素插入到该位置后；
  * 重复步骤2~5。
  */
-
+//[6, 3, 8, 2, 9, 1]
 extension Solution {
     static func insertionSort(_ nums: inout [Int]) -> [Int] {
         
+        var prev = Int.max    //前一个下标
+        for i in 1..<nums.count {
+            prev = i-1 //前一个下标
+            while prev >= 0 && nums[i] < nums[prev] { //前一个值大于当前值
+                nums[prev+1] = nums[prev] //向后移动
+                prev -= 1
+            }
+            nums[prev+1] = nums[i]
+        }
         
         return nums
     }
 }
+
+print("插入排序结果 -- " + (Solution.insertionSort(&nums)).description)
 
 
 
