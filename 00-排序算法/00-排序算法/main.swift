@@ -213,6 +213,43 @@ print("希尔排序结果 -- " + (Solution.shellSort(&nums)).description)
 
 
 
+/**
+ 6: 堆排序: 是对选择排序的改进
+ 
+ 先看选择排序:
+ void selectionSort(int list [], int N) {
+    for (i = 0; i< N; i++) {
+        //从List[i]到List[N-1]中找最小元, 并将最小元的位置赋值给MinPosition
+        MinPosition = ScanForMin(List, i, N-1);
+        Swap(List[i], List[MinPosition])
+    }
+ }
+ 
+ 选择排序的瓶颈在于ScanForMin(), 查找最小元
+ 
+ 算法一: 需要额外的O(N)的空间, 并且赋值元素需要时间
+ void headSort(ElementType A[], int N)
+ {
+    BuildHead(A); //构建最小堆
+    for (int i = 0; i < N;i ++) {
+        TmpA[i] = DeleteMin(A);  //O(logN)
+    }
+    for (int i = 0; i < N;i ++) {
+        A[i] = TmpA[i];
+    }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */
 
 
 
