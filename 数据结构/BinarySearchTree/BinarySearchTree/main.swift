@@ -4,11 +4,7 @@
 //
 //  Created by 宇郜 on 2019/5/12.
 //  Copyright © 2019 宇郜. All rights reserved.
-//  二叉搜索树
-
-/**
- 二叉搜索树的接口定义如下:
- */
+//  
 
 import Foundation
 
@@ -32,3 +28,4 @@ for e in datas {
 tree.remove(7)
 
 tree.printOfLevelTraversal()
+print("🌲的高度为: " + tree.height().description)

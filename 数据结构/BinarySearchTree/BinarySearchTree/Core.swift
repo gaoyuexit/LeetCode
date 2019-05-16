@@ -39,9 +39,9 @@ protocol TreePrintProtocol {
 }
 
 class Queue<E> { //队列
-    var array = [E]()
+    private var array = [E]()
     
-    func enQueue(element: E){
+    func enQueue(_ element: E){
         array.append(element)
     }
     
@@ -51,4 +51,9 @@ class Queue<E> { //队列
     var isEmpty: Bool {
         return array.isEmpty
     }
+    
+    var size: Int {
+        return array.count
+    }
+    
 }

@@ -17,6 +17,9 @@ import Foundation
 //    }
 //}
 
+/**
+ 二叉搜索树的接口定义如下:
+ */
 
 class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     
@@ -152,12 +155,12 @@ extension BinarySearchTree: TreePrintProtocol {
         guard let root = root else { return }
         
         let queue = Queue<Node<E>>()
-        queue.enQueue(element: root)
+        queue.enQueue(root)
         while !queue.isEmpty {
             let node = queue.outQueue()
             print(node.element)
-            if let left = node.left { queue.enQueue(element: left) }
-            if let right = node.right { queue.enQueue(element: right) }
+            if let left = node.left { queue.enQueue(left) }
+            if let right = node.right { queue.enQueue(right) }
         }
     }
     

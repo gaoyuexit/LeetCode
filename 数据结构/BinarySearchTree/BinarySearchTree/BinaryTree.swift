@@ -63,3 +63,36 @@ class BinaryTree<E: Comparable> {
 }
 
 
+
+
+extension BinaryTree {
+    
+    //判断二叉树是否是完全二叉树
+    func isComplete() -> Bool {
+        
+        return true
+    }
+    
+    // 返回二叉树的高度
+    func height() -> Int {
+        guard let root = root else { return 0 }
+        var height = 0 //数的高度
+        var levelSize = 1 //每一层元素的数量
+        let queue = Queue<Node<E>>()
+        queue.enQueue(root)
+        
+        while !queue.isEmpty {
+            let node = queue.outQueue()
+            levelSize -= 1
+            
+            if let left = node.left { queue.enQueue(left) }
+            if let right = node.right { queue.enQueue(right) }
+            
+            if levelSize == 0 { //即将访问下一层
+                levelSize = queue.size
+                height += 1
+            }
+        }
+        return height
+    }
+}
