@@ -17,7 +17,7 @@ class Node<E> {
     
     init(_ element: E, parent: Node<E>?) {
         self.element = element
-        self.parent = parent;
+        self.parent = parent
     }
 }
 
@@ -27,6 +27,12 @@ extension Node {
     }
     var isLeaf: Bool { //是否是叶子节点
         return left == nil && right == nil
+    }
+    var isLeftChild: Bool { //自己是父节点的左子树节点还是右子树节点  是否是父节点的左节点
+        return parent != nil && self === parent?.left
+    }
+    var isRightChild: Bool { //自己是父节点的左子树节点还是右子树节点  是否是父节点的右节点
+        return parent != nil && self === parent?.right
     }
 }
 

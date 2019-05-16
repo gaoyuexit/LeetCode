@@ -20,14 +20,16 @@ import Foundation
 /**
  二叉搜索树的接口定义如下:
  */
-
 class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     
     public func add(_ element: E) {
         
         guard let root = root else { //没有根节点
-            self.root = Node(element, parent: nil)
+            self.root = creatNewNode(element, parent: nil)
             count += 1
+            
+            //对于AVL树自平衡用
+            afterAdd(self.root!)
             return
         }
         
@@ -49,12 +51,15 @@ class BinarySearchTree<E: Comparable>: BinaryTree<E> {
             }
         }
         
-        let newNode = Node(element, parent: parent)
+        let newNode = creatNewNode(element, parent: parent)
         if cmp > 0 {
             parent.right = newNode
         }else {
             parent.left = newNode
         }
+        
+        //对于AVL树自平衡用
+        afterAdd(newNode)
         count += 1
     }
     
@@ -138,6 +143,14 @@ class BinarySearchTree<E: Comparable>: BinaryTree<E> {
         }else {
             return 0
         }
+    }
+    
+    // AVL添加之后的自平衡接口, 二叉搜索树不做任何处理, 子类可重写
+    internal func afterAdd(_ node: Node<E>) {}
+    
+    // 创建新节点, 子类可重写
+    internal func creatNewNode(_ element: E, parent: Node<E>?) -> Node<E> {
+        return Node(element, parent: parent)
     }
 }
 
