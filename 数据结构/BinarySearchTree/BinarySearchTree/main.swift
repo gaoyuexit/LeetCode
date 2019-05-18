@@ -34,10 +34,15 @@ func test_BinarySearchTree() {
 /************************AVL树**************************/
 func test_AVLTree() {
     let tree = AVLTree<Int>()
-    let datas = [33, 55, 38, 91, 83, 81, 99, 62, 13, 11, 63, 69]
+    let datas = [85,19,69,3,7,99,95]
     for e in datas {
         tree.add(e)
     }
+    
+    tree.remove(99)
+    tree.remove(85)
+    tree.remove(95)
+    
     tree.printOfLevelTraversal()
 }
 
@@ -48,9 +53,6 @@ func test_AVLTree() {
 
 //test_BinarySearchTree()
 test_AVLTree()
-
-
-
 
 
 

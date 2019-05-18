@@ -102,12 +102,16 @@ class BinarySearchTree<E: Comparable>: BinaryTree<E> {
             if node === (node.parent!.left ?? nil) { node.parent!.left = replaceNode } //如果要被删除的节点是它父节点的左边
             if node === (node.parent!.right ?? nil) { node.parent!.right = replaceNode } //如果要被删除的节点是它父节点的右边
             
+            afterRemove(node)
         }else{ //要删除的节点是叶子节点
             if node.parent == nil { //根节点
                 root = nil
+                afterRemove(node)
+                
             }else{ //不是跟节点
                 if node === (node.parent!.left ?? nil) { node.parent!.left = nil }
                 if node === (node.parent!.right ?? nil) { node.parent!.right = nil }
+                afterRemove(node)
             }
         }
     }
@@ -145,8 +149,11 @@ class BinarySearchTree<E: Comparable>: BinaryTree<E> {
         }
     }
     
-    // AVL添加之后的自平衡接口, 二叉搜索树不做任何处理, 子类可重写
+    // AVL添加之后的自平衡接口, 二叉搜索树不做任何处理, 子类可重写  时间复杂度: O(1)
     internal func afterAdd(_ node: Node<E>) {}
+    
+    // AVL删除之后的自平衡接口, 二叉搜索树不做任何处理, 子类可重写  时间复杂度: O(logN)
+    internal func afterRemove(_ node: Node<E>) {}
     
     // 创建新节点, 子类可重写
     internal func creatNewNode(_ element: E, parent: Node<E>?) -> Node<E> {
