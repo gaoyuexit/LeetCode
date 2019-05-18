@@ -66,16 +66,16 @@ class AVLNode<E: Comparable>: Node<E> {
 class AVLTree<E:Comparable>: BinarySearchTree<E> {
     
     override func afterAdd(_ node: Node<E>) {
-        var _node: AVLNode<E>? = (node.parent as! AVLNode<E>)
+        var _node: AVLNode<E>? = (node.parent as? AVLNode<E>)
         
         while _node != nil {
             if _node!.isBalance {// 如果该节点是平衡的  更新高度
-                _node!.updateHeight()
+                updateHeight(_node!)
             }else{ //不平衡 恢复平衡
                 reBalance(_node!)
                 break //找到第一个不平衡的节点, 恢复平衡, 整个树就平衡了
             }
-            _node = (_node?.parent as! AVLNode<E>)
+            _node = (_node?.parent as? AVLNode<E>)
         }
     }
     
@@ -83,6 +83,10 @@ class AVLTree<E:Comparable>: BinarySearchTree<E> {
         return AVLNode(element, parent: parent)
     }
     
+    private func updateHeight(_ node: Node<E>) {
+        guard let node = node as? AVLNode<E> else { return }
+        node.updateHeight()
+    }
     
     /**
      恢复平衡
@@ -110,13 +114,79 @@ class AVLTree<E:Comparable>: BinarySearchTree<E> {
     }
     
     
-    // 对某个节点进行左旋转
-    private func rotationLeft(_ node: AVLNode<E>) {
+    // 对传进来的节点进行左旋转
+    // grand需要旋转的节点
+    /**
+     
+     |                          |
+     g(左旋)                     p
+      \                       /   \
+       p             -->     g     n
+      / \                    \
+     c   n                    c(有可能为null)
+         |
+         |
+        add(n的子树上添加)
+     */
+    private func rotationLeft(_ grand: AVLNode<E>) {
+        let parent = grand.right!
+        let child = parent.left
+        //更改连线
+        grand.right = child
+        parent.left = grand
         
+        //旋转更改连线之后需要做的事情
+        afterRotation(grand: grand, parent: parent, child: child)
     }
     
-    // 对某个节点进行右旋转
-    private func rotationRight(_ node: AVLNode<E>) {
+    
+    // 对传进来的节点进行右旋转
+    // grand需要旋转的节点
+    
+    /**
+     
+            |                          |
+            g(右旋)                     p
+           /                          /  \
+          p             -->          n    g
+         / \                             /
+        n   c(有可能为null)               c
+        |
+        |
+       add(n的子树上添加)
+     */
+    
+    private func rotationRight(_ grand: AVLNode<E>) {
+        let parent = grand.left!
+        let child = parent.right
+        //更改连线
+        grand.left = child
+        parent.right = grand
         
+        //旋转更改连线之后需要做的事情
+        afterRotation(grand: grand, parent: parent, child: child)
+    }
+    
+    
+    // 旋转更改连线之后需要做的事情
+    private func afterRotation(grand: Node<E>, parent: Node<E>, child: Node<E>?) {
+        //让parent成为子树的根节点
+        parent.parent = grand.parent
+        if grand.isLeftChild {
+            grand.parent!.left = parent
+        }else if grand.isRightChild {
+            grand.parent!.right = parent
+        } else { // grand是根节点
+            root = parent
+        }
+        //更新child的parent
+        if let child = child {
+            child.parent = grand
+        }
+        //更新grand的parent
+        grand.parent = parent
+        //更新节点内的高度
+        updateHeight(grand)
+        updateHeight(parent)
     }
 }

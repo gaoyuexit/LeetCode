@@ -96,3 +96,40 @@ extension BinaryTree {
         return height
     }
 }
+
+
+/**
+          7
+        2    5
+       1 3  4
+ */
+
+extension BinaryTree: TreePrintProtocol {
+    
+    func printOfLevelTraversal() {
+        
+        guard let root = root else { return }
+        var levelSize = 1 //每一层元素的数量
+        
+        let queue = Queue<Node<E>>()
+        queue.enQueue(root)
+        while !queue.isEmpty {
+            let node = queue.outQueue()
+            print(node.element)
+            levelSize -= 1
+            
+            if let left = node.left { queue.enQueue(left) }
+            if let right = node.right { queue.enQueue(right) }
+            
+            if levelSize == 0 { //即将访问下一层
+                levelSize = queue.size
+                print("-----------------------")
+            }
+        }
+    }
+    
+    func printOfPreOrderTraversal(){}
+    func printOfInOrderTraversal(){}
+    func printOfPostOrderTraversal(){}
+    
+}

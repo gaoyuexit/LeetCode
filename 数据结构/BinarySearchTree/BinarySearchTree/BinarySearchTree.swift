@@ -154,31 +154,3 @@ class BinarySearchTree<E: Comparable>: BinaryTree<E> {
     }
 }
 
-
-/**
-    7
-  2    5
- 1  3   4
- */
-
-extension BinarySearchTree: TreePrintProtocol {
-    
-    func printOfLevelTraversal() {
-        
-        guard let root = root else { return }
-        
-        let queue = Queue<Node<E>>()
-        queue.enQueue(root)
-        while !queue.isEmpty {
-            let node = queue.outQueue()
-            print(node.element)
-            if let left = node.left { queue.enQueue(left) }
-            if let right = node.right { queue.enQueue(right) }
-        }
-    }
-    
-    func printOfPreOrderTraversal(){}
-    func printOfInOrderTraversal(){}
-    func printOfPostOrderTraversal(){}
-    
-}
