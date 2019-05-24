@@ -15,6 +15,8 @@ import Foundation
     1 3            12
  */
 
+//前序遍历: 7,4,2,1,3,5,9,8,11,12
+//中序遍历: 1,2,3,4,5,7,8,9,11,12
 
 //http://520it.com/binarytrees/  测试网站
 
@@ -25,8 +27,9 @@ func test_BinarySearchTree() {
     for e in datas {
         tree.add(e)
     }
-    tree.remove(7)
-    tree.printOfLevelTraversal()
+//    tree.remove(7)
+//    tree.printOfLevelTraversal()
+    tree.printOfInOrderTraversal(tree.root)
     print("🌲的高度为: " + tree.height().description)
 }
 
@@ -46,13 +49,10 @@ func test_AVLTree() {
     tree.printOfLevelTraversal()
 }
 
-
-
 /********************************main*********************************/
 
-
-//test_BinarySearchTree()
-test_AVLTree()
+test_BinarySearchTree()
+//test_AVLTree()
 
 
 

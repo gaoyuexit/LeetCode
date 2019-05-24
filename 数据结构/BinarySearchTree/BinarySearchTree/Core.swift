@@ -38,10 +38,11 @@ extension Node {
 
 
 protocol TreePrintProtocol {
+    associatedtype E
     func printOfLevelTraversal() //层序遍历
-    func printOfPreOrderTraversal()//前序
-    func printOfInOrderTraversal()//中序
-    func printOfPostOrderTraversal()//后序
+    func printOfPreOrderTraversal(_ node: Node<E>?)//前序
+    func printOfInOrderTraversal(_ node: Node<E>?)//中序
+    func printOfPostOrderTraversal(_ node: Node<E>?)//后序
 }
 
 class Queue<E> { //队列

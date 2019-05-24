@@ -106,6 +106,7 @@ extension BinaryTree {
 
 extension BinaryTree: TreePrintProtocol {
     
+    //层序遍历
     func printOfLevelTraversal() {
         
         guard let root = root else { return }
@@ -128,8 +129,35 @@ extension BinaryTree: TreePrintProtocol {
         }
     }
     
-    func printOfPreOrderTraversal(){}
-    func printOfInOrderTraversal(){}
-    func printOfPostOrderTraversal(){}
+    /*
+          4
+        /   \
+       2     7
+      / \   / \
+     1   3 6   9
+ 
+ */
+    //前序遍历
+    func printOfPreOrderTraversal(_ node: Node<E>?){
+        guard let node = node else { return }
+        print(node.element)
+        printOfPreOrderTraversal(node.left)
+        printOfPreOrderTraversal(node.right)
+    }
     
+    //中序遍历
+    func printOfInOrderTraversal(_ node: Node<E>?) {
+        guard let node = node else { return }
+        printOfInOrderTraversal(node.left)
+        print(node.element)
+        printOfInOrderTraversal(node.right)
+    }
+    
+    //后续遍历
+    func printOfPostOrderTraversal(_ node: Node<E>?) {
+        guard let node = node else { return }
+        printOfPostOrderTraversal(node.left)
+        printOfPostOrderTraversal(node.right)
+        print(node.element)
+    }
 }
