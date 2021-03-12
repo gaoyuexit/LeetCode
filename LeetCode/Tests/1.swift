@@ -1,91 +1,61 @@
 //
-//  TwoSum.swift
-//  TwoSum
+//  1.swift
+//  LeetCodeTests
 //
-//  Created by Lex Tang on 4/15/15.
-//  Copyright (c) 2015 Lex Tang. All rights reserved.
+//  Created by 宇郜 on 2021/3/12.
+//  Copyright © 2021 gaoyu. All rights reserved.
 //
-//
-//  This Swift class is imitated from the C++ repo:
-//  https://github.com/haoel/leetcode
 
-// Source : https://oj.leetcode.com/problems/two-sum/
-// Author : Hao Chen
-// Date   : 2014-06-17
-
-/*
-*
-* Given an array of integers, find two numbers such that they add up to a specific target number.
-*
-* The function twoSum should return indices of the two numbers such that they add up to the target,
-* where index1 must be less than index2. Please note that your returned answers (both index1 and index2)
-* are not zero-based.
-*
-* You may assume that each input would have exactly one solution.
-*
-* Input: numbers={2, 7, 11, 15}, target=9
-* Output: index1=1, index2=2
-*
-*
-*/
-
-import Foundation
 import XCTest
+
+/**
+ 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。
+ 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+ 你可以按任意顺序返回答案。
+
+ 示例 1：
+ 输入：nums = [2,7,11,15], target = 9
+ 输出：[0,1]
+ 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+ 
+ 示例 2：
+ 输入：nums = [3,2,4], target = 6
+ 输出：[1,2]
+ 
+ 示例 3：
+ 输入：nums = [3,3], target = 6
+ 输出：[0,1]
+ 
+ 提示：
+
+ 2 <= nums.length <= 103
+ -109 <= nums[i] <= 109
+ -109 <= target <= 109
+ 只会存在一个有效答案
+
+ 来源：力扣（LeetCode）
+ 链接：https://leetcode-cn.com/problems/two-sum
+ 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ */
 
 
 class TwoSum {
-
-    /**
-    The easy solution is O(n^2) run-time complexity.
-    We can see the nested loop just for searching,
-    So, we can use a hashmap to reduce the searching time complexity from O(n) to
-    O(1)
-    (the map's `key` is the number, the `value` is the position)
-    But be careful, if there are duplication numbers in array,
-    how the map store the positions for all of same numbers?
-
-    - parameter array:  Input numbers
-    - parameter target: Target number
-
-    - returns: Indeces of the two numbers
-    */
-    class func twoSum0(_ array: [Int], target: Int) -> (Int, Int)? {
-        for (i, item0) in array.enumerated() {
-            for (j, item1) in array.enumerated() {
-                if item0 + item1 == target {
-                    return (i + 1, j + 1)
-                }
+    
+    class func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        guard nums.count > 1 else { return [] }
+        var hashTable = [Int: Int]();
+        for(i, num) in nums.enumerated() {
+            //other number
+            //eg: 2 = 9 - 7  other need 2, 2 in hash Table?
+            let other = target - num;
+            if let otherIndex = hashTable[other] {
+                return [otherIndex, i]
+            }else{
+                hashTable[num] = i
             }
         }
-        return .none
+        return []
     }
-
-    /**
-    The implementation as below is bit tricky. but not difficult to understand
-    1) Traverse the array one by one
-    2) just put the `target - num[i]`(not `num[i]`) into the map
-    so, when we checking the next num[i], if we found it is exisited in the map.
-    which means we found the second one.
-
-    - parameter array:  Input numbers
-    - parameter target: Target number
-
-    - returns: Indeces of the two numbers
-    */
-    class func twoSum1(_ array: [Int], target: Int) -> (Int, Int)? {
-        var map = [Int: Int]()
-        for (i, item0) in array.enumerated() {
-            // found the second one
-            if let secondOne = map[item0] {
-                return (secondOne + 1, i + 1)
-            } else {
-                // store the first one position into the second one's key
-                map[target - item0] = i
-            }
-        }
-        return .none
-    }
-
 }
 
 class TwoSumTest: XCTestCase {
@@ -95,25 +65,13 @@ class TwoSumTest: XCTestCase {
     let case2 = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
     func testTwoSum0() {
-        let result0 = TwoSum.twoSum0(self.case0, target: 9)!
-        XCTAssert(result0.0 == 1 && result0.1 == 4, "TwoSum.twoSum0")
-
-        let result1 = TwoSum.twoSum0(self.case1, target: 9)!
-        XCTAssert(result1.0 == 1 && result1.1 == 2, "TwoSum.twoSum0")
-
-        let result2 = TwoSum.twoSum0(self.case2, target: 9)
-        XCTAssert(result2 == nil, "TowSum.twoSum0")
+        let result0 = TwoSum.twoSum(case0, 9)
+        XCTAssert(result0.count == 2 && case0[result0.first!] + case0[result0.last!] == 9, "case0 error")
     }
-
-    func testTwoSum1() {
-        let result0 = TwoSum.twoSum1(self.case0, target: 9)!
-        XCTAssert(result0.0 == 1 && result0.1 == 4, "TwoSum.twoSum1")
-
-        let result1 = TwoSum.twoSum1(self.case1, target: 9)!
-        XCTAssert(result1.0 == 1 && result1.1 == 2, "TwoSum.twoSum1")
-
-        let result2 = TwoSum.twoSum1(self.case2, target: 9)
-        XCTAssert(result2 == nil, "TwoSum.twoSum1")
-    }
-
+    
 }
+
+
+// 暴力方法需要两次循环以此相加进行比较, 如果将nums装进一个字典中, 字典是个哈希表, 取值为O(1), 直接遍历一次数组nums即可, 看看需要的另外的值是否在字典中(O(1)),
+// 方式一: 先遍历一遍将nums中的下标和值放到字典中, 在遍历一次nums数组比较, 是否和为target
+// 方式二: 因为是nums中的两个数的值为target, 所以num[0]+num[1]=target 或者 num[1]+num[0]=target 这两种都是正确的, 所以可以只遍历一次数组, 看看另外的一个需要的值是否在字典中, 如果不在就讲下标和值放入到字典中, 因为target需要的数组中的两个值, 返回的时候返回 [otherIndex, i], 因为otherIndex是先放进字典的下标,比较小
