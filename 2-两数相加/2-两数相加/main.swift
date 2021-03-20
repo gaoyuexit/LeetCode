@@ -38,15 +38,15 @@ public class ListNode {
 
 class Solution {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        return addTwoNumbers(l1, l2, carry: 0);
+        return addTwoNumbers(l1, l2, carry: 0)
     }
     
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?, carry: Int) -> ListNode? {
         
         guard l1 != nil || l2 != nil else {
-            return carry == 0 ? nil : ListNode(carry);
+            return carry == 0 ? nil : ListNode(carry)
         }
-        let value = (l1?.val ?? 0) + (l2?.val ?? 0) + carry;
+        let value = (l1?.val ?? 0) + (l2?.val ?? 0) + carry
         let list = ListNode(value%10)
         list.next = addTwoNumbers(l1?.next, l2?.next, carry: value/10)
         return list

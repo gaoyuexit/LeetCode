@@ -1,29 +1,28 @@
 //
 //  ListNode.swift
-//  LeetCode
+//  LeetCodeTests
 //
-//  Created by Lex Tang on 5/5/15.
-//  Copyright (c) 2015 Lex Tang. All rights reserved.
+//  Created by 宇郜 on 2021/3/12.
+//  Copyright © 2021 gaoyu. All rights reserved.
 //
 
 import Foundation
 
 class ListNode: CustomDebugStringConvertible {
 
-    var value: Int = 0
-    var next: ListNode?
+    public var val: Int
+    public var next: ListNode?
 
-    init(_ value: Int = 0, _ next: ListNode? = nil) {
-        self.value = value
-        self.next = next
-    }
-
+    public init() { self.val = 0; self.next = nil; }
+    public init(_ val: Int) { self.val = val; self.next = nil; }
+    public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+    
     var debugDescription: String {
-        var s = "\(value)"
+        var s = "\(val)"
         var p = self
         while p.next != nil {
             p = p.next!
-            s = "\(s) \(p.value)"
+            s = "\(s) \(p.val)"
         }
         return s
     }

@@ -1,9 +1,9 @@
 //
 //  TreeNode.swift
-//  LeetCode
+//  LeetCodeTests
 //
-//  Created by Lex Tang on 5/6/15.
-//  Copyright (c) 2015 Lex Tang. All rights reserved.
+//  Created by 宇郜 on 2021/3/12.
+//  Copyright © 2021 gaoyu. All rights reserved.
 //
 
 import Foundation
