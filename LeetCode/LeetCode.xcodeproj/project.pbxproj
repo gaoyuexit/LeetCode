@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7346D7B3263113B700593F3F /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346D7B2263113B700593F3F /* 3.swift */; };
 		7375060925FB139C00FCED3F /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375060825FB139C00FCED3F /* 1.swift */; };
 		737B6CBE2600AF300038E625 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B6CBD2600AF300038E625 /* 2.swift */; };
 		D71563861AF9BF780090A569 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71563851AF9BF780090A569 /* TreeNode.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7346D7B2263113B700593F3F /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		7375060825FB139C00FCED3F /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
 		737B6CBD2600AF300038E625 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		D71563851AF9BF780090A569 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			children = (
 				7375060825FB139C00FCED3F /* 1.swift */,
 				737B6CBD2600AF300038E625 /* 2.swift */,
+				7346D7B2263113B700593F3F /* 3.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -126,7 +129,7 @@
 				TargetAttributes = {
 					D7FB8E081AF899FE00286272 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -169,6 +172,7 @@
 				D7FB8E601AF8AF2400286272 /* Character+LeetCode.swift in Sources */,
 				7375060925FB139C00FCED3F /* 1.swift in Sources */,
 				D71563861AF9BF780090A569 /* TreeNode.swift in Sources */,
+				7346D7B3263113B700593F3F /* 3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LexTang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -314,7 +319,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LexTang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
