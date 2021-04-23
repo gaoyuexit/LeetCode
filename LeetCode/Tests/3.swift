@@ -98,7 +98,7 @@ class _3Test: XCTestCase {
     let s4 = ""
     let s5 = " "
     
-    func testTwoAdd() {
+    func test() {
         
         let s1_max = _3.lengthOfLongestSubstring1(s1)
         let s2_max = _3.lengthOfLongestSubstring1(s2)
