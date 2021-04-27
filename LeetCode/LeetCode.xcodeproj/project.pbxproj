@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7346D7B3263113B700593F3F /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346D7B2263113B700593F3F /* 3.swift */; };
 		7346D8BD2631812400593F3F /* 704.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346D8BC2631812400593F3F /* 704.swift */; };
+		7346D8C026329B4800593F3F /* 27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346D8BF26329B4800593F3F /* 27.swift */; };
 		7375060925FB139C00FCED3F /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375060825FB139C00FCED3F /* 1.swift */; };
 		737B6CBE2600AF300038E625 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B6CBD2600AF300038E625 /* 2.swift */; };
 		D71563861AF9BF780090A569 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71563851AF9BF780090A569 /* TreeNode.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		7346D7B2263113B700593F3F /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		7346D8BC2631812400593F3F /* 704.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 704.swift; sourceTree = "<group>"; };
+		7346D8BF26329B4800593F3F /* 27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 27.swift; sourceTree = "<group>"; };
 		7375060825FB139C00FCED3F /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
 		737B6CBD2600AF300038E625 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		D71563851AF9BF780090A569 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 				737B6CBD2600AF300038E625 /* 2.swift */,
 				7346D7B2263113B700593F3F /* 3.swift */,
 				7346D8BC2631812400593F3F /* 704.swift */,
+				7346D8BF26329B4800593F3F /* 27.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				737B6CBE2600AF300038E625 /* 2.swift in Sources */,
 				D7FB8E581AF89D0900286272 /* String+LeetCode.swift in Sources */,
+				7346D8C026329B4800593F3F /* 27.swift in Sources */,
 				D7FB8E561AF89CD900286272 /* ListNode.swift in Sources */,
 				D7FB8E601AF8AF2400286272 /* Character+LeetCode.swift in Sources */,
 				7375060925FB139C00FCED3F /* 1.swift in Sources */,
