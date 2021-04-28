@@ -8,6 +8,7 @@
 |2|[两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [Swift](./Tests/Swift/2.swift) | Medium |
 |3|[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [Swift](./Tests/Swift/3.swift) | Medium |
 |27|[移除元素](https://leetcode-cn.com/problems/remove-element/) | [Swift](./Tests/Swift/27.swift) | Easy |
+|209|[长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | [Swift](./Tests/Swift/209.swift) | Medium |
 |704|[二分查找](https://leetcode-cn.com/problems/binary-search/) | [Swift](./Tests/Swift/704.swift) | Easy |
 
 ## Unit tests

@@ -34,7 +34,7 @@ import XCTest
 
 class _704 {
     
-    //推荐:https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.md
+    //推荐参考:https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.md
     //解题1:
     //定义 target 是在一个在左闭右闭的区间里，也就是[left, right]
     //即: int left = 0;  int right = nums.size() - 1

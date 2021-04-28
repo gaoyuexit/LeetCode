@@ -12,6 +12,7 @@
 		7346D8C026329B4800593F3F /* 27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346D8BF26329B4800593F3F /* 27.swift */; };
 		7375060925FB139C00FCED3F /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375060825FB139C00FCED3F /* 1.swift */; };
 		737B6CBE2600AF300038E625 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B6CBD2600AF300038E625 /* 2.swift */; };
+		73B7F1AE263816E400168BB8 /* 209.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B7F1AD263816E400168BB8 /* 209.swift */; };
 		D71563861AF9BF780090A569 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71563851AF9BF780090A569 /* TreeNode.swift */; };
 		D7FB8E561AF89CD900286272 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB8E551AF89CD900286272 /* ListNode.swift */; };
 		D7FB8E581AF89D0900286272 /* String+LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB8E571AF89D0900286272 /* String+LeetCode.swift */; };
@@ -24,6 +25,7 @@
 		7346D8BF26329B4800593F3F /* 27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 27.swift; sourceTree = "<group>"; };
 		7375060825FB139C00FCED3F /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
 		737B6CBD2600AF300038E625 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
+		73B7F1AD263816E400168BB8 /* 209.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 209.swift; sourceTree = "<group>"; };
 		D71563851AF9BF780090A569 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		D7AB14CC1B9B344900DEDE9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D7FB8E091AF899FE00286272 /* LeetCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 				737B6CBD2600AF300038E625 /* 2.swift */,
 				7346D7B2263113B700593F3F /* 3.swift */,
 				7346D8BF26329B4800593F3F /* 27.swift */,
+				73B7F1AD263816E400168BB8 /* 209.swift */,
 				7346D8BC2631812400593F3F /* 704.swift */,
 			);
 			name = Swift;
@@ -135,6 +138,7 @@
 				TargetAttributes = {
 					D7FB8E081AF899FE00286272 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = L2D5UZR3VJ;
 						LastSwiftMigration = 1240;
 					};
 				};
@@ -179,6 +183,7 @@
 				D7FB8E601AF8AF2400286272 /* Character+LeetCode.swift in Sources */,
 				7375060925FB139C00FCED3F /* 1.swift in Sources */,
 				D71563861AF9BF780090A569 /* TreeNode.swift in Sources */,
+				73B7F1AE263816E400168BB8 /* 209.swift in Sources */,
 				7346D7B3263113B700593F3F /* 3.swift in Sources */,
 				7346D8BD2631812400593F3F /* 704.swift in Sources */,
 			);
@@ -234,6 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -282,6 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -294,6 +301,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L2D5UZR3VJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -318,6 +326,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L2D5UZR3VJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
