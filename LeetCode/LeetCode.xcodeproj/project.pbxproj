@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7346D7B2263113B700593F3F /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
+		7346D7B2263113B700593F3F /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		7346D8BC2631812400593F3F /* 704.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 704.swift; sourceTree = "<group>"; };
 		7346D8BF26329B4800593F3F /* 27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 27.swift; sourceTree = "<group>"; };
 		73537871268CC7DB00BBBB3E /* offer_62.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer_62.swift; sourceTree = "<group>"; };
