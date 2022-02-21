@@ -12,6 +12,8 @@
 |151|[翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) | [Swift](./Tests/Swift/151.swift) | Medium |
 |209|[长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | [Swift](./Tests/Swift/209.swift) | Medium |
 |704|[二分查找](https://leetcode-cn.com/problems/binary-search/) | [Swift](./Tests/Swift/704.swift) | Easy |
+
+|offer_47|[礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/) | [Swift](./Tests/Swift/offer_47.swift) | Medium |
 |offer_62|[圆圈中最后剩下的数字-约瑟夫环](https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/) | [Swift](./Tests/Swift/offer_62.swift) | Easy |
 
 ## Unit tests
