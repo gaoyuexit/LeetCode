@@ -17,6 +17,7 @@
 
 |offer_47|[礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/) | [Swift](./Tests/Swift/offer_47.swift) | Medium |
 |offer_62|[圆圈中最后剩下的数字-约瑟夫环](https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/) | [Swift](./Tests/Swift/offer_62.swift) | Easy |
+|interview_16_16|[面试题 16.16.部分排序](https://leetcode-cn.com/problems/sub-sort-lcci/) | [Swift](./Tests/Swift/Interview_16_16.swift) | Medium |
 
 ## Unit tests
 This is a test-driven project. You may press <kbd>⌘</kbd> + <kbd>u</kbd> in Xcode to invoke the tests. Or just `rake` in CLI.
