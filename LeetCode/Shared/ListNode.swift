@@ -26,5 +26,32 @@ class ListNode: CustomDebugStringConvertible {
         }
         return s
     }
+}
 
+extension ListNode {
+    static func create(_ array: [Int]) -> ListNode? {
+        if array.isEmpty { return nil }
+        let headNode: ListNode = ListNode(array[0])
+        var preNode: ListNode? = headNode
+        for i in 1..<array.count {
+            let node = ListNode(array[i])
+            preNode?.next = node
+            preNode = node
+        }
+        return headNode
+    }
+    
+    static func print(_ head: ListNode?) -> [Int] {
+        guard let head = head else { return [] }
+        var result = [Int]()
+        
+        var p = head
+        result.append(head.val)
+        
+        while p.next != nil {
+            p = p.next!
+            result.append(p.val)
+        }
+        return result
+    }
 }
