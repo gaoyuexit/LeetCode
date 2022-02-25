@@ -113,13 +113,31 @@ class _2: XCTestCase {
             var l2 = l2
             var preNode = dummy
             while l1 != nil || l2 != nil {
-                let sum = (l1?.val ?? 0) + (l2?.val ?? 0) + carry
-                let node = ListNode(sum % 10)
+                
+//                let sum = (l1?.val ?? 0) + (l2?.val ?? 0) + carry
+//                let node = ListNode(sum % 10)
+//                carry = sum / 10
+//                preNode.next = node
+//                preNode = node
+//                l1 = l1?.next
+//                l2 = l2?.next
+                
+                var v1 = 0
+                if l1 != nil {
+                    v1 = l1!.val
+                    l1 = l1!.next
+                }
+                var v2 = 0
+                if l2 != nil {
+                    v2 = l2!.val
+                    l2 = l2!.next
+                }
+                let sum = v1 + v2 + carry
                 carry = sum / 10
+                let node = ListNode(sum % 10)
                 preNode.next = node
                 preNode = node
-                l1 = l1?.next
-                l2 = l2?.next
+                
             }
             //检查carry
             if carry > 0 { preNode.next = ListNode(carry) }
