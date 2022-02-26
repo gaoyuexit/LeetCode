@@ -10,6 +10,7 @@
 |27|[移除元素](https://leetcode-cn.com/problems/remove-element/) | [Swift](./Tests/Swift/27.swift) | Easy |
 |59|[螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) | [Swift](./Tests/Swift/59.swift) | Medium |
 |75|[颜色分类](https://leetcode-cn.com/problems/sort-colors/) | [Swift](./Tests/Swift/75.swift) | Medium |
+|86|[分隔链表](https://leetcode-cn.com/problems/partition-list/) | [Swift](./Tests/Swift/86.swift) | Medium |
 |88|[合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | [Swift](./Tests/Swift/88.swift) | Easy |
 |151|[翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) | [Swift](./Tests/Swift/151.swift) | Medium |
 |160|[相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | [Swift](./Tests/Swift/160.swift) | Easy |
