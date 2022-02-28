@@ -17,6 +17,7 @@
 |203|[移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/) | [Swift](./Tests/Swift/203.swift) | Easy |
 |209|[长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | [Swift](./Tests/Swift/209.swift) | Medium |
 |234|[回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) | [Swift](./Tests/Swift/234.swift) | Easy |
+|239|[滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Swift](./Tests/Swift/239.swift) | Hard |
 |704|[二分查找](https://leetcode-cn.com/problems/binary-search/) | [Swift](./Tests/Swift/704.swift) | Easy |
 
 |offer_47|[礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/) | [Swift](./Tests/Swift/offer_47.swift) | Medium |
