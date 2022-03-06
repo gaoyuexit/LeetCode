@@ -15,6 +15,7 @@
 		736D278327CCE1A20073A4BC /* 239.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D278227CCE1A20073A4BC /* 239.swift */; };
 		7375060925FB139C00FCED3F /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375060825FB139C00FCED3F /* 1.swift */; };
 		737B6CBE2600AF300038E625 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B6CBD2600AF300038E625 /* 2.swift */; };
+		7388FE5C27D5093A00953431 /* 15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7388FE5B27D5093A00953431 /* 15.swift */; };
 		73B63F0E27C3ACD000D285ED /* offer_47.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B63F0D27C3ACD000D285ED /* offer_47.swift */; };
 		73B63F1027C6332100D285ED /* 88.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B63F0F27C6332100D285ED /* 88.swift */; };
 		73B63F1227C63DE100D285ED /* 75.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B63F1127C63DE100D285ED /* 75.swift */; };
@@ -40,6 +41,7 @@
 		736D278227CCE1A20073A4BC /* 239.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 239.swift; sourceTree = "<group>"; };
 		7375060825FB139C00FCED3F /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
 		737B6CBD2600AF300038E625 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
+		7388FE5B27D5093A00953431 /* 15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15.swift; sourceTree = "<group>"; };
 		73B63F0D27C3ACD000D285ED /* offer_47.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer_47.swift; sourceTree = "<group>"; };
 		73B63F0F27C6332100D285ED /* 88.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 88.swift; sourceTree = "<group>"; };
 		73B63F1127C63DE100D285ED /* 75.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 75.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				7375060825FB139C00FCED3F /* 1.swift */,
 				737B6CBD2600AF300038E625 /* 2.swift */,
 				7346D7B2263113B700593F3F /* 3.swift */,
+				7388FE5B27D5093A00953431 /* 15.swift */,
 				7346D8BF26329B4800593F3F /* 27.swift */,
 				73C5AA7A263938A500DD7440 /* 59.swift */,
 				73B63F1127C63DE100D285ED /* 75.swift */,
@@ -222,6 +225,7 @@
 				73B63F1827CA04CC00D285ED /* 160.swift in Sources */,
 				D7FB8E561AF89CD900286272 /* ListNode.swift in Sources */,
 				73537872268CC7DB00BBBB3E /* offer_62.swift in Sources */,
+				7388FE5C27D5093A00953431 /* 15.swift in Sources */,
 				D7FB8E601AF8AF2400286272 /* Character+LeetCode.swift in Sources */,
 				73B63F1027C6332100D285ED /* 88.swift in Sources */,
 				7375060925FB139C00FCED3F /* 1.swift in Sources */,

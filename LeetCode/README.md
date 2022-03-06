@@ -7,6 +7,7 @@
 |1|[两数之和](https://leetcode-cn.com/problems/two-sum/) | [Swift](./Tests/Swift/1.swift) | Easy |
 |2|[两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [Swift](./Tests/Swift/2.swift) | Medium |
 |3|[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [Swift](./Tests/Swift/3.swift) | Medium |
+|15|[三数之和](https://leetcode-cn.com/problems/3sum/) | [Swift](./Tests/Swift/15.swift) | Medium |
 |27|[移除元素](https://leetcode-cn.com/problems/remove-element/) | [Swift](./Tests/Swift/27.swift) | Easy |
 |59|[螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) | [Swift](./Tests/Swift/59.swift) | Medium |
 |75|[颜色分类](https://leetcode-cn.com/problems/sort-colors/) | [Swift](./Tests/Swift/75.swift) | Medium |
