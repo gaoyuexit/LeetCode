@@ -9,6 +9,7 @@
 |3|[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [Swift](./Tests/Swift/3.swift) | Medium |
 |15|[三数之和](https://leetcode-cn.com/problems/3sum/) | [Swift](./Tests/Swift/15.swift) | Medium |
 |27|[移除元素](https://leetcode-cn.com/problems/remove-element/) | [Swift](./Tests/Swift/27.swift) | Easy |
+|50|[Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) | [Swift](./Tests/Swift/50.swift) | Medium |
 |59|[螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) | [Swift](./Tests/Swift/59.swift) | Medium |
 |75|[颜色分类](https://leetcode-cn.com/problems/sort-colors/) | [Swift](./Tests/Swift/75.swift) | Medium |
 |86|[分隔链表](https://leetcode-cn.com/problems/partition-list/) | [Swift](./Tests/Swift/86.swift) | Medium |
