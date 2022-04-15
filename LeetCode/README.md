@@ -23,6 +23,7 @@
 |234|[回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) | [Swift](./Tests/Swift/234.swift) | Easy |
 |239|[滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Swift](./Tests/Swift/239.swift) | Hard |
 |283|[移动零](https://leetcode-cn.com/problems/move-zeroes/) | [Swift](./Tests/Swift/283.swift) | Easy |
+|509|[斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/) | [Swift](./Tests/Swift/509.swift) | Easy |
 |704|[二分查找](https://leetcode-cn.com/problems/binary-search/) | [Swift](./Tests/Swift/704.swift) | Easy |
 
 |offer_47|[礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/) | [Swift](./Tests/Swift/offer_47.swift) | Medium |
